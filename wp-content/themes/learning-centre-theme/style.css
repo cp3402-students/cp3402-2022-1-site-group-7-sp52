@@ -1,0 +1,85 @@
+/*!
+Theme Name: Learning centre
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: learning-centre
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Learning centre is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Lato:wght@700&family=Patua+One&family=Roboto:wght@300;500;700&family=Source+Sans+Pro:wght@300&display=swap');
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+	font-family: "Source Sans Pro";
+    line-height: 30px;
+    font-weight: 300;
+    font-style: normal;
+    color: #595959;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+    font-family: "Patua One";
+    line-height: 30px;
+    font-weight: 400;
+}
+
+
+/** customize compnent **/
+.standard-padding-top,
+.standard-padding {
+    padding-top: var(--standard-padding);
+}
+
+.standard-padding-bottom,
+.standard-padding {
+    padding-bottom: var(--standard-padding);
+}
+
+
+.standard-padding-sm-top,
+.standard-padding-sm {
+    padding-top: var(--standard-padding-sm);
+}
+
+.standard-padding-sm-bottom,
+.standard-padding-sm {
+    padding-bottom: var(--standard-padding-sm);
+}
