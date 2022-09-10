@@ -129,7 +129,7 @@ function learning_centre_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		)
+		),
 	);
 }
 add_action( 'widgets_init', 'learning_centre_widgets_init' );
@@ -176,3 +176,72 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+add_shortcode("show-carousel","carousel" );
+
+function carousel(){
+
+	$args = array(  
+		'post_type' => 'page',
+		'post_status' => 'publish',
+		'posts_per_page' => -1, 
+		'order' => 'Desc',
+	);
+
+	$loop = new WP_Query( $args ); 
+	$carousel_list = "not found";
+
+	/** show store list **/
+	if($loop->have_posts()){
+		$carousel_list = "";
+		$carousel_list .= "<div class='owl-carousel owl-theme'>";
+		while ( $loop->have_posts() ) : $loop->the_post(); 
+		$title = get_the_title();
+		$carousel_list .= "
+			<div class='pre-card-wrapper'>
+				<div class='pre-card'> 
+					<div class='pre-date'>
+							<div class='pre-date-box'>
+								<span class='month'>Mar</span><br>	
+								<span class='day'>14</span>	
+							</div>
+							<div class='pre-date-comment'>
+								<i class='bi bi-chat-fill'></i>
+								<span>1</span>
+							</div>
+						</div>
+					<div class='inner-wrapper'>
+						<div class='pre-desc'>
+							<p>
+								The speed of light is generally rounded down to 186,000 miles per second. In exact terms it is 299,792,458 m/s <a href='#'>[...]</a>
+							</p>
+							<a href='#'>Read More »</a>
+						</div>
+					</div>
+
+					<div class='overlap-btn-group'>
+					<div class='pre-title'>Physics Trivia: Speed of...</div>
+					<div class='pre-excerpt'>The speed of light is......</div>
+				</div>
+
+
+				</div>
+			</div>
+		";
+
+		endwhile;
+		wp_reset_postdata(); 
+		$carousel_list .= "</div>";
+	}
+
+	return $carousel_list;
+
+
+	function add_my_awesome_widgets_collection( $folders ) {
+		$folders[] = get_stylesheet_directory(). '/extra-widgets/'; // important: Slash on end string is required.
+		return $folders;
+	}
+	add_filter( 'siteorigin_widgets_widget_folders', 'add_my_awesome_widgets_collection' );
+	
+
+}	

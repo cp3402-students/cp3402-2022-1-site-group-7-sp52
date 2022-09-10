@@ -23,8 +23,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Lato:wght@700&family=Patua+One&family=Roboto:wght@300;500;700&family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Lato:wght@400;700&family=Open+Sans:wght@300;500;600&family=Patua+One&family=Roboto:wght@300;500;700&family=Source+Sans+Pro:wght@300&display=swap');
 
+:root {
+    --standard-padding : 100px;
+    --standard-padding-sm : 50px;
+    --font-family-cardo: 'Cardo', sans-serif;
+    --font-family-lato: 'Lato', sans-serif;
+    --font-family-patua-one : 'Patua One', sans-serif;
+    --font-family-roboto: 'Roboto', sans-serif;
+    --font-family-source-sans-pro: 'Source Sans Pro', sans-serif;
+    --font-family-open-sans: 'Open Sans', sans-serif;
+    --primary: rgba(41,93,132,1);
+    --link: #2b5d83;
+    --secondary: #347731;
+}
 
 html, body {
     overflow-x: hidden;
@@ -61,8 +74,24 @@ h1,
     font-weight: 400;
 }
 
+/** General **/
 
-/** customize compnent **/
+
+a{
+    text-decoration: none;
+    color: var(--link);
+}
+
+a:hover{
+    color: var(--secondary);
+}
+
+.site-title{
+    margin: 0px;
+}
+
+
+/** custom **/
 .standard-padding-top,
 .standard-padding {
     padding-top: var(--standard-padding);
@@ -82,4 +111,538 @@ h1,
 .standard-padding-sm-bottom,
 .standard-padding-sm {
     padding-bottom: var(--standard-padding-sm);
+}
+
+
+
+.btn{
+    font-family: var(--font-family-open-sans);
+    font-size: 14px;
+    border-radius: 0px;
+    font-weight: inherit;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary)
+}
+
+.btn-primary:hover{
+    background-color: #333;
+    border: 1px solid #666;
+}
+
+
+
+/** Topbar **/
+
+#top-bar{
+    background-color: var(--primary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 12px;
+    font-family: var(--font-family-lato);
+    text-transform: uppercase;
+}
+
+#top-bar .btn{
+    padding: 5px 15px;
+}
+
+#top-bar .right-col span{
+    padding-right: 10px;
+}
+
+
+/** Menu **/
+
+#masthead{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+ul#menu-main-menu>li>a {
+    border-left: 1px solid #e0e0e0;
+    border-top: 1px solid rgba(255,255,255,.5);
+    padding: 0.75em 1em;
+    font-size: 13px;
+    font-family: var(--font-family-lato);
+    line-height: 50px;
+    display: inline-block;
+}
+
+ul#menu-main-menu>li:last-child>a {
+    border-right: 1px solid #e0e0e0;
+}
+
+/** home **/
+
+#main-carousel .owl-nav>button {
+    background: #000000b3;
+    color: #FFFFFF;
+    font-size: 30px;
+    margin: 30px 5px 0 5px;
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-carousel .owl-nav>button:hover{
+    background-color: #DBC164;
+}
+
+#main-carousel .owl-nav>button>span {
+    margin-top: -5px;
+}
+
+
+/** pre-card **/
+
+.pre-card{
+    overflow: hidden;
+    font-family: var(--font-family-cardo);
+    background-color: white;
+    padding-top: 100%;
+    position: relative;
+}
+
+.pre-date {
+    width: 100%;
+    background: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    left: 65%;
+    transition: .5s;
+    top: 0;
+    position: absolute;
+    height: 25%;
+    align-items: center;
+}
+
+.pre-date-comment{
+    position: relative;
+}
+
+.pre-date-comment i {
+    font-size: 35px;
+    color: white;
+}
+
+.pre-date-comment span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+    font-size: 18px;
+    top: 2px;
+    text-align: center;
+}
+
+.pre-card:hover .pre-date {
+    left: 0%;
+}
+
+span.month {
+    font-size: 24px;
+    color: black;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 24px !important;
+}
+
+span.day {
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    left: -2px;
+    line-height: 24px !important;
+}
+
+.inner-wrapper {
+    padding: 60px 15px 50px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: relative;
+    left: 100%;
+    transition: .5s;
+    position: absolute;
+    left: 0;
+    height: 75%;
+    bottom: 0;
+}
+
+.pre-card:hover .pre-desc{
+    left: 0%;
+}
+
+.pre-desc p{
+    margin: 0px;
+    font-size: 14px;
+}
+
+.pre-desc a{
+    color: var(--secondary);
+    font-family: var(--font-family-patua-one);
+}
+
+.pre-title, .pre-excerpt {
+    margin: 0px;
+    font-weight: 700;
+    color: white;
+    font-size: 14px;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+.pre-title {
+    background-color: #2b5d83;
+    text-transform: uppercase;
+    margin-bottom: 0%;
+    transition: .5s;
+}
+
+
+.pre-excerpt{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    transition: .5s;
+    bottom: 0;
+}
+
+
+
+.pre-card:hover .pre-title {
+    background-color: #2b5d83;
+    text-transform: uppercase;
+    margin-bottom: 46%;
+    margin-bottom: 100px;
+}
+
+.pre-card:not(:hover) .inner-wrapper {
+    left: 100%;
+}
+
+
+.pre-card:hover .pre-excerpt {
+    bottom: -100px;
+}
+
+.overlap-btn-group {
+    position: absolute;
+    z-index: 1;
+    bottom: 36px;
+}
+
+
+div#main-carousel h3 {
+    font-family: Cardo;
+    line-height: 52px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 52px;
+}
+
+div#main-carousel .section-title p {
+    font-family: Cardo;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+div#main-carousel .owl-nav {
+    text-align: center;
+}
+
+
+.intro-grid i {
+    font-size: 2rem;
+    display: block;
+    text-align: end;
+}
+
+.intro-grid p {
+    font-family: Cardo;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+}
+
+
+.image-caption h3.widget-title {
+    font-size: 14px;
+}
+
+
+.intro-accordion .ac_title_class {
+    font-family: "Patua One";
+}
+
+
+.intro-accordion .ac_title_class {
+    font-family: "Patua One";
+}
+
+.intro-accordion .lightweight-accordion .lightweight-accordion-title {
+    background: transparent;
+    border-top: 1px solid #ddd;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+
+.intro-accordion .lightweight-accordion h4{
+    display: inline-block;
+    font-size: 28px;
+    padding-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.intro-accordion>div>div {
+    margin: 0px!important;
+}
+
+
+.intro-accordion .widget_sow-image {
+    height: 170px;
+}
+
+
+/** how we teach **/
+
+.how-we-teach *{
+    font-size: 20px;
+}
+
+.how-we-teach p {
+    font-family: var(--font-family-cardo);
+}
+
+.how-we-teach .section-title h3 {
+    color: var(--secondary);
+}
+
+.how-we-teach h3{
+    color: #008000;
+    font-size: 20px;
+}
+
+
+.how-we-teach .section-title {
+    border-bottom: 1px solid white;
+}
+
+/** class card **/
+
+.class-card-item {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.class-card .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 4px solid white;
+}
+
+.class-card .icon-content {
+    align-items: center!important;
+    flex-direction: row;
+}
+
+
+.icon-content>div:first-child {
+    text-align: center;
+}
+
+
+.class-card .icon-content h3.widget-title {
+    font-size: 18px !important;
+    color: #2b5d83;
+    font-weight: 300;
+    font-family: 'Cardo';
+    margin: 0px;
+}
+
+.class-card  .textwidget>*:last-child {
+    margin: 0px;
+}
+
+.class-card  .icon-content , 
+.class-card  .section-title {
+    padding: 20px;
+}
+
+.class-card .section-title *{
+    font-family: var(--font-family-cardo);
+}
+
+.class-card .section-title p{
+    font-size: 14px;
+}
+
+.class-card .widget-title {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.class-card  .ow-button-base{
+    font-family: var(--font-family-patua-one);
+}
+
+.class-card .section-group-title h3 {
+    color: #2b5d83;
+    font-size: 16px;
+    text-align: center;
+}
+
+.register-remind {
+    font-size: 18px;
+    font-family: var(--font-family-patua-one);
+}
+
+.count h1{
+    font-size: 48px;
+    color: white;
+    font-weight: 300;
+    padding-bottom: 5px;
+    display: block;
+    font-family: var(--font-family-cardo);
+}
+
+.count .widget-title {
+    font-size: 30px;
+    font-family: var(--font-family-lato);
+    color: white!important;
+    margin: 0px;
+}
+
+.count .section-title {
+    border: 0px!important;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.count .section-title:before {
+    content: '';
+    position: absolute;
+    max-width: 400px;
+    width: 100%;
+    height: 1px;
+    background: #dbc164;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.count .section-title:after {
+    content: '';
+    position: absolute;
+    max-width: 400px;
+    width: 100%;
+    height: 1px;
+    background: #dbc164;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/** pro course **/
+
+.pro-course h3.widget-title {
+    font-size: 16px;
+}
+
+
+.pro-course  .sow-tabs-panel {
+    background: #488e5c;
+    color: white;
+}
+
+.pro-course  .sow-tabs-panel-container {
+    padding: 14px 20px;
+}
+
+
+.pro-course  h2{
+font-size: 23px;
+    border-bottom: 1px solid;
+    padding-bottom: 25px;
+    margin-bottom: 15px; 
+
+}
+
+/** message **/
+
+.message .tss-wrapper .tss-even .tss-grid-item{
+    margin: 0px;
+}
+
+
+
+/** Responsive **/
+
+@media(max-width: 1399px){
+    .pre-card:hover .pre-title{
+        margin-bottom: 66px;
+    }
+}
+
+@media(max-width: 1199px){
+    .pre-card:hover .pre-title {
+        margin-bottom: 125px;
+    }
+}
+
+@media(max-width: 991px){
+    .pre-card:hover .pre-title{
+        margin-bottom: 60px;
+    }
+}
+
+@media(max-width: 780px){
+    .pre-card:hover .pre-title {
+        margin-bottom: 92px;
+    }
+}
+
+@media(max-width:767.5px){
+    .pre-card-wrapper {
+        max-width: 290px;
+        margin: auto;
+    }
+
+    div#main-carousel h3 {
+        font-size: 30px;
+    }
+
+    div#main-carousel .section-title p {
+        font-size: 16px;
+        margin: 0px;
+    }
+
+    .intro-grid i{
+        text-align: start;
+    }
+
 }
