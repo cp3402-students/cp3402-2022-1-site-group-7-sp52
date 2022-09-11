@@ -511,6 +511,23 @@ div#main-carousel .owl-nav {
     text-align: center;
 }
 
+.class-card>div {
+    position: relative;
+}
+
+
+.class-card>div:not(:last-child):before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #bcbcbc;
+    bottom: 0;
+    top: 0;
+    transform: translateX(15px);
+    right: 0;
+}
+
 .register-remind {
     font-size: 18px;
     font-family: var(--font-family-patua-one);
@@ -599,6 +616,69 @@ font-size: 23px;
 }
 
 
+.message .single-item-wrapper {
+    align-items: center;
+}
+
+.message .single-item-wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.message .item-content-wrapper.tss-right {
+    max-width: 550px;
+    background: #273D4C;
+}
+
+.message .tss-meta-info.tss-left {
+    padding-right: 30px;
+}
+
+
+.message  .tss-wrapper .tss-layout1 .item-content, .message  .tss-wrapper .tss-carousel1 .item-content {
+    font-family: var(--font-family-roboto);
+    line-height: 28px;
+    font-weight: 300;
+    font-style: italic;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+
+.message .tss-wrapper .tss-layout1 .item-content-wrapper:after, .message .tss-wrapper .tss-carousel1 .item-content-wrapper:after {
+    border-right-color: var(--secondary);
+}
+
+.message .swiper-wrapper{
+    align-items: flex-end;
+}
+
+/** form **/
+
+.designed-form .wpforms-form{
+    font-family: var(--font-family-open-sans);
+}
+
+.designed-form .wpforms-form input, .designed-form .wpforms-form textarea {
+    padding: 10px!important;
+    min-height: 45px!important;
+    width: 100%!important;
+    max-width: 100%!important;
+}
+
+.designed-form .wpforms-form .wpforms-submit {
+    width: 100%;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 7px 15px!important;
+    font-size: 18px!important;
+}
+
+.designed-form .wpforms-form .wpforms-submit:hover {
+    background: var(--primary)!important;
+    color: white;
+}
 
 /** Responsive **/
 
@@ -643,6 +723,16 @@ font-size: 23px;
 
     .intro-grid i{
         text-align: start;
+    }
+
+    
+    .message  .single-item-wrapper{
+        flex-flow: column-reverse;
+    }
+
+    .message  .tss-wrapper .tss-layout1 .item-content-wrapper:after, .message  .tss-wrapper .tss-carousel1 .item-content-wrapper:after{
+        transform: rotate(270deg);
+        top: 98.6%!important;
     }
 
 }
