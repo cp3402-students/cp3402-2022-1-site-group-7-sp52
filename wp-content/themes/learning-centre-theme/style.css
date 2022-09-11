@@ -719,7 +719,296 @@ font-size: 23px;
     font-weight: normal;
 }
 
+
+
+/** sub banner **/
+
+#sub-banner {
+    background: #666666;
+    color: white;
+    text-align: center;
+}
+
+#sub-banner .bi {
+    font-size: 11px;
+}
+
+#sub-banner h1 {
+    margin: 0px;
+    font-family: var(--font-family-lato);
+}
+
+
+#sub-banner>div:nth-child(2) {
+    padding: 14px 15px;
+    background: #3d3d3d;
+}
+
+#sub-banner>div:first-child, #sub-banner>div:last-child {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#sub-banner>div:last-child h4 {
+    font-size: 24px;
+    font-family: 'Open Sans';
+    min-height: 40px;
+    margin: 0px;
+    line-height: 1.5;
+}
+
+
+
+/** classes **/
+
+.classes>div {
+    background: #f8f8f8;
+}
+
+.classes .widget_sow-editor {
+    padding: 25px;
+}
+
+.classes .widget_sow-image {
+    margin: 0px!important;
+}
+
+.classes h3.widget-title {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.classes .siteorigin-widget-tinymce.textwidget>*:last-child{
+    margin: 0px;
+}
+
+
+/** about **/
+.section-heading h3.widget-title {
+    font-size: 18px;
+    margin: 0px;
+}
+
+.inside-grid-column>*:last-child {
+    margin: 0px;
+}
+
+
+.sow-tabs-panel p:empty {
+    display: none;
+}
+
+.about .sow-tabs-tab-container {
+    padding: 0px!important;
+}
+
+.about  .sow-tabs-tab-container>.sow-tabs-tab:first-child {
+    margin-left: 0px!important;
+}
+
+
+.about  .sow-tabs-title {
+    font-size: 18px;
+    font-family: var(--font-family-patua-one);
+}
+
+.about  .lgc-column p {
+    margin-bottom: 0px;
+}
+
+
+.aligncenter {
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+hr {
+    background: #D9D9D9;
+    opacity: 1;
+}
+
+div#tab_container_376 .wp-caption-text {
+    color: #2b5d83;
+    font-family: var(--font-family-patua-one);
+    white-space: nowrap;
+}
+
+/** timetable **/
+/* schedule */
+.mptt-inner-event-content {
+    display: flex;
+    flex-direction: column;
+}
+
+p.timeslot {
+    order: 1;
+}
+
+p.timeslot>* {
+	display: block;
+}
+
+.mptt-inner-event-content .timeslot time {
+    font-size: 16px!important;
+    font-weight: 700;
+}
+
+p.timeslot span {
+	display: none;
+}
+
+p.event-description {
+    font-size: 16px!important;
+    font-weight: 700;
+}
+
+select.mptt-menu.mptt-navigation-select {
+    background: #018001;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+	outline: none;
+}
+
+select.mptt-menu.mptt-navigation-select option {    
+    background: white;
+    color: black;
+}
+
+select.mptt-menu.mptt-navigation-select option:hover {
+    background: #018001;
+}
+
+/** widget **/
+
+.widget-sidebar .widget-title:before {
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    background: #EBEBEB;
+    left: 0;
+    right: 0;
+}
+
+
+.widget-sidebar .widget-title {
+    position: relative;
+    text-align: center;
+}
+
+
+.panel-grid-cell .widget-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.widget-sidebar h4 {
+    display: inline-block;
+    text-align: center;
+    background: #f8f8f8;
+    z-index: 9;
+    margin: 0px;
+    position: relative;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #2b5d83;
+}
+
+
+.widget-group {
+    margin-bottom: 30px;
+}
+
+#tab_container_376 div.tab-content {
+    font-family: 'Source Sans Pro'!important;
+}
+
+.widget-sidebar li {
+    font-family: "Patua One";
+    list-style: none;
+    text-align: center;
+}
+
+
+.widget-sidebar .blc-card {
+    text-align: center;
+    border: 1px solid #a1a1a1!important;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 40px 5px 30px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    background: transparent;
+}
+
+.blc-card i {
+    color: #295d84;
+    font-size: 40px;
+}
+
+.blc-card strong {
+    font-family: "Patua One";
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+
+
+.widget-sidebar .card:hover *{
+    color: white!important;
+}
+
+
+.widget-sidebar a:not(:hover) {
+    color: #595959;
+}
+
+#tab_container_376 .wpsm_nav-tabs.wpsm_nav > li > a {
+    font-family: "Patua One"!important;
+}
+
+
+.blc-card strong i {
+    font-size: 11px;
+    margin-left: -10px;
+    opacity: 0;
+    transition: .5s;
+}
+
+
+.widget-sidebar .blc-card:hover {
+    background-color: #347731;
+    border-color: #347731 !important;
+    color: white;
+}
+
+
+.widget-sidebar .blc-card:hover strong i{
+    margin-left: 2px;
+    opacity: 1;
+}
+
+
 /** Responsive **/
+
+
+@media(min-width: 991px){
+    .about  .sow-tabs-panel-content {
+        display: flex;
+        align-items: center;
+    }    
+}
 
 @media(max-width: 1399px){
     .pre-card:hover .pre-title{

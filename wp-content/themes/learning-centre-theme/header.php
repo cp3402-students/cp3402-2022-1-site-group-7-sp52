@@ -68,4 +68,27 @@
 			</nav>
 		</header>
 
+		<?php if(!is_front_page() && !is_page('Contact Us')): ?>
+
+			<?php $sub_title = is_page('Registration') ? 'Join Us at Baizonn!' : '' ?>
+
+			<div id="sub-banner">
+				<div>
+					<div class="container">
+						Home  <i class="bi bi-chevron-right"></i>
+					</div>
+				</div>
+				<div>
+					<div class="container">
+						<h1 class="display-4"><?= get_the_title(); ?></h1>
+					</div>
+				</div>
+				<div>
+					<div class="container">
+						<h4 class="display-4"><?= $sub_title; ?></h4>
+					</div>
+				</div>
+			</div>
+		<?php endif; ?>
+
 

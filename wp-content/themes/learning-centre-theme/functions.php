@@ -131,6 +131,18 @@ function learning_centre_widgets_init() {
 			'after_title'   => '</h2>',
 		),
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'BAIZONN PTE LTD', 'baizonn-pte' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'learning-centre' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
 }
 add_action( 'widgets_init', 'learning_centre_widgets_init' );
 
@@ -236,12 +248,10 @@ function carousel(){
 
 	return $carousel_list;
 
-
-	function add_my_awesome_widgets_collection( $folders ) {
-		$folders[] = get_stylesheet_directory(). '/extra-widgets/'; // important: Slash on end string is required.
-		return $folders;
+	add_shortcode("widget","show_widget" );
+	function show_widget(){
+		return  "Hello World";
 	}
-	add_filter( 'siteorigin_widgets_widget_folders', 'add_my_awesome_widgets_collection' );
 	
 
 }	
