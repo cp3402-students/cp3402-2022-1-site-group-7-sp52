@@ -680,6 +680,45 @@ font-size: 23px;
     color: white;
 }
 
+/** contact info **/
+.contact-info h3.widget-title {
+    font-size: 14px;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-info .siteorigin-widget-tinymce.textwidget>* {
+    margin-bottom: 5px;
+}
+
+.contact-info .siteorigin-widget-tinymce.textwidget>*:not(a) {
+    margin-bottom: 0px;
+    font-family: var(--font-family-cardo);
+    font-size: 20px;
+}
+
+.contact-info strong {
+    font-weight: bold;
+}
+
+.contact-info a {
+    font-family: 'Patua One';
+    font-size: 16px;
+}
+
+
+.wpforms-container .wpforms-title {
+    font-family: var(--font-family-cardo);
+    color: var(--primary);
+}
+
+.wpforms-container .wpforms-description {
+    font-family: var(--font-family-open-sans);
+    color: red;
+    font-weight: normal;
+}
+
 /** Responsive **/
 
 @media(max-width: 1399px){
