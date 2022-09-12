@@ -1,9 +1,9 @@
 /*!
 Theme Name: Learning centre
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme URI: http://enzos19.me/
+Author: enzos19
+Author URI: http://enzos19.me/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -164,7 +164,7 @@ a:hover{
 ul#menu-main-menu>li>a {
     border-left: 1px solid #e0e0e0;
     border-top: 1px solid rgba(255,255,255,.5);
-    padding: 0.75em 1em;
+    padding: 0.75em 2em;
     font-size: 13px;
     font-family: var(--font-family-lato);
     line-height: 50px;
@@ -284,6 +284,14 @@ span.day {
 .pre-desc p{
     margin: 0px;
     font-size: 14px;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 3;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .pre-desc a{
@@ -313,6 +321,7 @@ span.day {
     position: relative;
     transition: .5s;
     bottom: 0;
+    display: block;
 }
 
 
@@ -744,7 +753,11 @@ font-size: 23px;
     background: #3d3d3d;
 }
 
-#sub-banner>div:first-child, #sub-banner>div:last-child {
+#sub-banner>div:first-child{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#sub-banner>div:last-child {
     padding-top: 25px;
     padding-bottom: 25px;
 }

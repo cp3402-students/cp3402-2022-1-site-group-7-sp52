@@ -194,7 +194,7 @@ add_shortcode("show-carousel","carousel" );
 function carousel(){
 
 	$args = array(  
-		'post_type' => 'page',
+		'post_type' => 'post',
 		'post_status' => 'publish',
 		'posts_per_page' => -1, 
 		'order' => 'Desc',
@@ -208,14 +208,18 @@ function carousel(){
 		$carousel_list = "";
 		$carousel_list .= "<div class='owl-carousel owl-theme'>";
 		while ( $loop->have_posts() ) : $loop->the_post(); 
-		$title = get_the_title();
+		$title = wp_trim_words(get_the_title(), 4, "...");
+		$content = wp_trim_words(get_the_content(), 5, "...");
+		$long_content = wp_trim_words(get_the_content(), 30, "...");
+		$day = date( 'd', strtotime(get_the_date()) );
+		$month = date( 'M', strtotime(get_the_date()) );
 		$carousel_list .= "
 			<div class='pre-card-wrapper'>
 				<div class='pre-card'> 
 					<div class='pre-date'>
 							<div class='pre-date-box'>
-								<span class='month'>Mar</span><br>	
-								<span class='day'>14</span>	
+								<span class='month'>$month</span><br>	
+								<span class='day'>$day</span>	
 							</div>
 							<div class='pre-date-comment'>
 								<i class='bi bi-chat-fill'></i>
@@ -225,15 +229,15 @@ function carousel(){
 					<div class='inner-wrapper'>
 						<div class='pre-desc'>
 							<p>
-								The speed of light is generally rounded down to 186,000 miles per second. In exact terms it is 299,792,458 m/s <a href='#'>[...]</a>
+							$long_content <a href='#'>[...]</a>
 							</p>
 							<a href='#'>Read More »</a>
 						</div>
 					</div>
 
 					<div class='overlap-btn-group'>
-					<div class='pre-title'>Physics Trivia: Speed of...</div>
-					<div class='pre-excerpt'>The speed of light is......</div>
+					<div class='pre-title'>$title</div>
+					<div class='pre-excerpt'>$content</div>
 				</div>
 
 

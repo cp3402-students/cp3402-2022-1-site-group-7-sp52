@@ -42,7 +42,7 @@
 		</div>
 	
 		<header id="masthead" class="site-header">
-			<nav class="navbar navbar-expand-lg navbar-light py-0">
+			<nav class="navbar navbar-expand-xl navbar-light py-xl-0 py-3">
 				<div class="container">
 					<?php the_custom_logo(); ?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
