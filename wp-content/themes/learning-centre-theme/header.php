@@ -26,20 +26,6 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<!-- <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'learning-centre' ); ?></a> -->
-
-		<div id="top-bar">
-			<div class="container">
-				<div class="row">
-					<div class="col-5">
-						<spa>General Inquiries:  62811816 </span>
-					</div>
-					<div class="col text-end right-col">
-						<span>Get Started Today</span>
-						<a class="btn btn-primary">Register</a>
-					</div>
-				</div>
-			</div>
-		</div>
 	
 		<header id="masthead" class="site-header">
 			<nav class="navbar navbar-expand-xl navbar-light py-xl-0 py-3">
