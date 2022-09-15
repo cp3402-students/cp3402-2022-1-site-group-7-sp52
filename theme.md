@@ -3,9 +3,11 @@ Theme Overview & Description
 Although, various attachments and functions of the websites can be changed via Wordpress, the main expression of the look, feel and other factors come from the theme itself. Theme plays an important role in deciding how the site will look and its aspects.
 Learning center theme is a fully customizable & neat theme which brings minimalist look and elegant style. Our theme is suitable for blog, personal portfolio, or any commercial websites.
 
+
 Theme Origin
 
 Our learning center theme was created using a starter theme from underscores. This gives us a starting codebase from which the starter theme was modified and developed into our current learning center theme. 
+
 
 Theme Installation
 
@@ -13,6 +15,8 @@ Within wordpress left menu panel:
 1.	Visit – Appearance > Theme > Add New >
 2.	Upload our theme zip file or  Search for “Learning center theme “ by enzos19
 3.	Install and activate
+
+
 
 Theme Folder Overview
 
@@ -29,20 +33,26 @@ Theme Features
 
 We came down with an idea of keeping our theme to a minimalistic approach and elegant style, so we included only a few key features.
 
+
 One-column layout
 We decided on a minimalist approach for our website to make it easier to maintain our theme and make it easier for future developers to continue coding our theme. It also made site integration easier when adding in plugins and editing content.
+
 
 Sidebar
 The sidebar was created by copying the contents from template-container-sidebar.php into style.css. If any changes should made to the Sidebar, the best way to do this is to edit the code in style.css and not in the template-container-sidebar.php.
 
+
 Design Decisions
 Below, contains our design decisions of the learning center theme and reasons why we chose to design in that particular way.
+
 
 Structure
 
 Padding
 Padding values are based on the ‘px’ value which is further explained here.
 Default padding values are set in the 'structure' section of style.css.
+
+
 
 Typography
 
