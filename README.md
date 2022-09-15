@@ -8,4 +8,4 @@ The following is a list of folders in files contained in the repository and thei
 3. [wp-content](/wp-content): This is the current WordPress content folder and contains our theme files
 4. [deployment.md](deployment.md): This deployment documentation gives an overview of our local development (and tools used) and the deployment of our site
 5. [site.md](site.md): This site documentation gives an overview on our WordPress site, plugins, features, and how to edit the site.
-6. [theme.md](/wp-content/themes/learning-centre-theme): Our working documentation on the custom theme, its origin and creation, important features, and how to modify it.
+6. [theme.md](theme.md): Our working documentation on the custom theme, its origin and creation, important features, and how to modify it.
